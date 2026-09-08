@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: suraksha-ai-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://suraksha-ai-api.onrender.com
